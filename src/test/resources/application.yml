@@ -1,0 +1,4 @@
+spring:
+  datasource.url: jdbc:h2:mem:test
+  jpa.hibernate.ddl-auto: create-drop
+phantombuster: { api-key: test, agent-id: "1", linkedin-session-cookie: test, user-agent: test }

@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:mock}
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/alumni}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:postgres}
+  jpa:
+    hibernate.ddl-auto: update
+    open-in-view: false
+
+phantombuster:
+  base-url: https://api.phantombuster.com/api/v2
+  api-key: ${PHANTOMBUSTER_API_KEY:}
+  agent-id: ${PHANTOMBUSTER_AGENT_ID:}          # LinkedIn Search Export phantom
+  linkedin-session-cookie: ${LINKEDIN_SESSION_COOKIE:}
+  user-agent: ${LINKEDIN_USER_AGENT:}           # must match the browser the cookie came from
+  max-profiles: 50
+  poll-interval-ms: 3000
+  max-poll-attempts: 40
